@@ -1,122 +1,142 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html lang="en">
+<%@ page session="false" %>
+<html>
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-  <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-  <script src="<c:url value="/resources/js/jquery-3.2.1.js" />"></script>
-  <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #1abc9c; /* Green */
-      color: #ffffff;
-  }
-  .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-  </style>
+	<title>SIGEMA</title>
+	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/styleOne.css" />" rel="stylesheet">
+    <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+  	<script src="<c:url value="/resources/js/jquery-3.2.1.js" />"></script>
 </head>
-<body>
+<body class="bg-1" marginwidth="0px">
+	
+	<div class="row-fluid bg-5" align="center"  >
+		<br>
+		<div class="col-sm-12 bg-5">
+			<h2>Registro de un Egresado</h2>
+		</div>
+	</div>	
+	<br>
+	<form class="form-horizontal" action="/action_page.php">
+		<div id="personalInfo" class="container bg-1" >
+		<div class="row">
+			<div class="col-sm-12" align="center">
+				<h4>Información Personal</h4>
+			</div>
+		</div>
+	  	<br/>
+	  	<br/>
+	<!--   	Fila Uno -->
+	    <div class="row"> 
+	    	<div class="col-sm-2">
+	    	</div>
+	    	<div class="col-sm-4" align="left" >
+	    		<label class="control-label col-sm-2" for="name">Nombre:</label>
+	    		<div class="col-sm-10">
+			        <input type="text" class="form-control" id="name" placeholder="Teclee el nombre" name="name">
+			    </div>
+	    	</div>
+	    	<div class="col-sm-4" align="left">
+	    		<label class="control-label col-sm-2" for="email">Correo:</label>
+			     <div class="col-sm-10">          
+			        <input type="email" class="form-control" id="email" placeholder="example@company.com" name="email">
+			     </div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    	</div>
+	    </div>
+	<!--     Fila Dos -->
+	    <div class="row">
+	    	<div class="col-sm-2">
+	    	</div>
+	    	<div class="col-sm-4" align="left" >
+	    		<label class="control-label col-sm-2" for="phone">Telefóno:</label>
+	    		<div class="col-sm-10">
+			        <input type="text" class="form-control" id="phone" placeholder="+(52)9531234567" name="phone">
+			    </div>
+	    	</div>
+	    	<div class="col-sm-4" align="left">
+	    		
+	    		<label class="control-label col-sm-10" for="placeOfOrigin">Lugar de Procedencia:</label>
+			     <div class="col-sm-10">          
+			        <input type="text" class="form-control" id="placeOfOrigin" placeholder="Hujauapan de León..." name="placeOfOrigin">
+			     </div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    	</div>
+	    </div>    
+	<!--     Fila Dos -->
+	    <div class="row">
+	    	<div class="col-sm-2">
+	    	</div>
+	    	<div class="col-sm-4" align="left" >
+	    		<label class="control-label col-sm-10" for="gen">Generación:</label>
+	    		<div class="col-sm-10">
+			        <input type="text" class="form-control" id="gen" placeholder="Teclee la generación" name="gen">
+			    </div>
+	    	</div>
+	    	<div class="col-sm-4" align="left">
+	    		
+	    		<label class="control-label col-sm-10" for="thesis">Título de Tésis:</label>
+			     <div class="col-sm-10">          
+			        <input type="text" class="form-control" id="thesis" placeholder="Teclee el titulo de tésis..." name="thesis">
+			     </div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    	</div>
+	    </div>
+<!-- 	    Fila Tres -->
+		<div class="row">
+	    	<div class="col-sm-2">
+	    	</div>
+	    	<div class="col-sm-4" align="left" >
+	    		<label class="control-label col-sm-10" for="adviser">Asesor:</label>
+	    		<div class="col-sm-10">
+			        <input type="text" class="form-control" id="adviser" placeholder="Nombre del asesor" name="adviser">
+			    </div>
+	    	</div>
+	    	<div class="col-sm-4" align="left">
+	    		
+	    		<label class="control-label col-sm-10" for="gradDate">Fecha de Titulación:</label>
+			     <div class="col-sm-10">          
+			        <input type="date" class="form-control" id="gradDate" placeholder="mm/dd/aaaa" name="gradDate">
+			     </div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    	</div>
+	    </div>
+<!-- 		Fila Cuatro	     -->
+		<div class="row">
+	    	<div class="col-sm-2">
+	    	</div>
+	    	<div class="col-sm-4" align="left" >
+	    		<label class="control-label col-sm-12" for="maxDegStudy">Maximo grado de Estudio:</label>
+	    		<div class="col-sm-10">
+			        <input type="text" class="form-control" id="maxDegStudy" placeholder="p. ej. Doctorado" name="maxDegStudy">
+			    </div>
+	    	</div>
+	    	<div class="col-sm-4" align="left">
+	    		
+	    		<label class="control-label col-sm-12" for="posStudyIns">Ultima institución de estudio:</label>
+			     <div class="col-sm-10">          
+			        <input type="text" class="form-control" id="posStudyIns" placeholder="p. ej. UNAM" name="posStudyIns">
+			     </div>
+	    	</div>
+	    	<div class="col-sm-2">
+	    	</div>
+	    </div>
+	<!--     Botón -->
+		
+		<br>
+	    <div class="form-group">        
+	      <div class="col-sm-12" align="center">
+	        <button type="submit" class="btn btn-default">Guardar</button>
+	      </div>
+	    </div>
+	     
+	</div>
+	
 
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
-  <img src="resources/imgs/imate.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
-</div>
-
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
-</div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="resources/imgs/imate.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="resources/imgs/imate.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="resources/imgs/imate.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
-</footer>
-
+</form>
 </body>
 </html>

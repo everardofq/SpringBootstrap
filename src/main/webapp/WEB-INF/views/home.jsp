@@ -2,7 +2,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>SIGEMA</title>
 	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/styleOne.css" />" rel="stylesheet">
     <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>

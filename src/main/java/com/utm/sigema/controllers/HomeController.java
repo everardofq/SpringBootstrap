@@ -1,4 +1,4 @@
-package com.utm.sigema;
+package com.utm.sigema.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -28,29 +28,15 @@ public class HomeController {
 	}
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
 		return "index";
 	}
 	
 	@RequestMapping(value = "/indexx", method = RequestMethod.GET)
-	public String indexx(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
+	public String indexx(Locale locale, Model model) {	
 		return "indexx";
+	}
+	@RequestMapping(value = "/empleo", method = RequestMethod.GET)
+	public String empleo(Locale locale, Model model) {	
+		return "empleo";
 	}
 }
